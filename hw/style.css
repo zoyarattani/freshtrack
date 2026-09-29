@@ -205,28 +205,53 @@ footer {
     background-color: #1f4d2a;
 }
 
-.dark-mode {
-    background-color: #18231b;
+body.dark-mode {
+    background-color: #172019;
     color: white;
 }
 
-.dark-mode section {
+body.dark-mode section {
     background-color: #26362a;
     color: white;
 }
 
-.dark-mode h2,
-.dark-mode h3 {
+body.dark-mode .info-card {
+    background-color: #35483a;
+    color: white;
+}
+
+body.dark-mode .gallery-grid figure {
+    background-color: #35483a;
+    color: white;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #b8e6bd;
+}
+
+body.dark-mode h2 {
+    border-bottom-color: #659c6e;
+}
+
+body.dark-mode mark {
+    background-color: #659c6e;
+    color: white;
+}
+
+body.dark-mode a {
     color: #b8e6bd;
 }
 
 .highlight-card {
-    border: 3px solid #2f6b3b;
-    transform: scale(1.03);
+    border: 4px solid #2f6b3b;
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .special-message {
     background-color: #d8f0c8;
+    color: #183d20;
     padding: 15px;
     border-radius: 8px;
     font-weight: 600;
