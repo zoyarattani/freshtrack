@@ -184,10 +184,15 @@ footer {
     }
 }
 
+#interactive {
+    text-align: center;
+}
+
 .button-area {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .button-area button {
@@ -232,6 +237,10 @@ body.dark-mode h3 {
 
 body.dark-mode h2 {
     border-bottom-color: #659c6e;
+}
+
+body.dark-mode .info-card h3 {
+    color: #b8e6bd;
 }
 
 body.dark-mode mark {
