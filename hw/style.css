@@ -183,3 +183,51 @@ footer {
         height: auto;
     }
 }
+
+.button-area {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button-area button {
+    background-color: #2f6b3b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button-area button:hover {
+    background-color: #1f4d2a;
+}
+
+.dark-mode {
+    background-color: #18231b;
+    color: white;
+}
+
+.dark-mode section {
+    background-color: #26362a;
+    color: white;
+}
+
+.dark-mode h2,
+.dark-mode h3 {
+    color: #b8e6bd;
+}
+
+.highlight-card {
+    border: 3px solid #2f6b3b;
+    transform: scale(1.03);
+}
+
+.special-message {
+    background-color: #d8f0c8;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
