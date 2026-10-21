@@ -3,51 +3,36 @@ const highlightButton = document.getElementById("highlight-button");
 const messageButton = document.getElementById("message-button");
 
 const message = document.getElementById("interactive-message");
-
-const featureCards = document.querySelectorAll("#features .info-card");
+const features = document.getElementById("features");
 
 themeButton.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
-        themeButton.innerHTML = "Switch to Light Mode";
+        themeButton.textContent = "Light Mode";
     } else {
-        themeButton.innerHTML = "Switch to Dark Mode";
+        themeButton.textContent = "Dark Mode";
     }
 });
 
 highlightButton.addEventListener("click", function () {
-    featureCards.forEach(function (card) {
-        card.classList.toggle("highlight-card");
-    });
+    features.classList.toggle("highlight");
 
-    if (highlightButton.innerHTML === "Highlight Features") {
-        highlightButton.innerHTML = "Remove Highlights";
+    if (features.classList.contains("highlight")) {
+        highlightButton.textContent = "Remove Highlight";
     } else {
-        highlightButton.innerHTML = "Highlight Features";
+        highlightButton.textContent = "Highlight Features";
     }
 });
 
 messageButton.addEventListener("click", function () {
-
     if (message.classList.contains("special-message")) {
-
-        message.innerHTML =
-            "Try the buttons below to customize the FreshTrack page.";
-
+        message.textContent = "Use the buttons below to change parts of the page.";
         message.classList.remove("special-message");
-        message.style.fontSize = "1rem";
-
-        messageButton.innerHTML = "Change Message";
-
+        messageButton.textContent = "Change Message";
     } else {
-
-        message.innerHTML =
-            "FreshTrack helps you stay organized, save money, and waste less food!";
-
+        message.textContent = "Remember to use your groceries before they expire!";
         message.classList.add("special-message");
-        message.style.fontSize = "1.2rem";
-
-        messageButton.innerHTML = "Reset Message";
+        messageButton.textContent = "Reset Message";
     }
 });
