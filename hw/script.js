@@ -27,11 +27,11 @@ highlightButton.addEventListener("click", function () {
 
 messageButton.addEventListener("click", function () {
     if (message.classList.contains("special-message")) {
-        message.textContent = "Use the buttons below to change parts of the page.";
+        message.textContent = "Use the buttons below to change a few things on the page.";
         message.classList.remove("special-message");
         messageButton.textContent = "Change Message";
     } else {
-        message.textContent = "Remember to use your groceries before they expire!";
+        message.textContent = "Don't forget to check which groceries need to be used soon!";
         message.classList.add("special-message");
         messageButton.textContent = "Reset Message";
     }
