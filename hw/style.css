@@ -35,8 +35,7 @@ h1 {
 h2 {
     color: #315c3a;
     font-size: 2.2rem;
-    font-weight: 700;
-    border-bottom: 1px solid #9a9a9a;
+    border-bottom: 1px solid #999999;
     padding-bottom: 5px;
     margin-top: 0;
 }
@@ -44,8 +43,7 @@ h2 {
 h3 {
     color: #315c3a;
     font-size: 1.55rem;
-    font-weight: 600;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -54,9 +52,9 @@ p {
 }
 
 .tagline {
+    font-size: 1.1rem;
     margin-top: 4px;
     margin-bottom: 0;
-    font-size: 1.1rem;
 }
 
 nav {
@@ -81,11 +79,12 @@ nav a {
 }
 
 nav a:hover {
+    color: #d6e5d8;
     text-decoration: underline;
 }
 
 main {
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
     padding: 35px 20px;
 }
@@ -94,6 +93,48 @@ section {
     padding: 20px 0 30px 0;
     margin-bottom: 25px;
     border-bottom: 1px solid #bbbbbb;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 45px;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    border-top: 2px solid #315c3a;
+    padding-top: 5px;
+}
+
+.feature-item h3 {
+    margin-top: 5px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+figcaption {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    color: #555555;
 }
 
 ol {
@@ -112,27 +153,18 @@ a:hover {
     color: #183a20;
 }
 
-figure {
-    margin: 30px 0 40px 0;
-    padding: 0;
-}
-
-figure img {
-    display: block;
-    width: 100%;
-    max-width: 560px;
-    height: auto;
-    border-radius: 0;
-}
-
-figcaption {
-    margin-top: 6px;
-    font-size: 0.9rem;
-    color: #555555;
+mark {
+    background-color: #dbe8d7;
+    color: #222222;
+    padding: 1px 3px;
 }
 
 #interactive {
     text-align: left;
+}
+
+.button-area {
+    margin-top: 15px;
 }
 
 button {
@@ -152,9 +184,8 @@ button:hover {
     background-color: #23442b;
 }
 
-.highlight {
-    border-left: 4px solid #315c3a;
-    padding-left: 15px;
+.highlight-feature {
+    border-top: 4px solid #8a6d2f;
 }
 
 .special-message {
@@ -196,6 +227,14 @@ body.dark-mode section {
     border-bottom-color: #666666;
 }
 
+body.dark-mode .feature-item {
+    border-top-color: #b8d4bd;
+}
+
+body.dark-mode .highlight-feature {
+    border-top-color: #d6b766;
+}
+
 body.dark-mode a {
     color: #b8d4bd;
 }
@@ -204,12 +243,13 @@ body.dark-mode figcaption {
     color: #cccccc;
 }
 
-body.dark-mode .special-message {
-    color: #b8d4bd;
+body.dark-mode mark {
+    background-color: #506653;
+    color: white;
 }
 
-body.dark-mode .highlight {
-    border-left-color: #b8d4bd;
+body.dark-mode .special-message {
+    color: #b8d4bd;
 }
 
 body.dark-mode button {
@@ -241,20 +281,27 @@ body.dark-mode button:hover {
 
     nav li {
         display: block;
-        margin: 7px 0;
+        margin: 8px 0;
     }
 
     main {
         padding: 20px;
     }
 
-    button {
-        display: block;
-        width: auto;
-        margin: 8px 0;
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 
     figure img {
-        width: 100%;
+        height: auto;
+    }
+
+    button {
+        display: block;
+        margin: 8px 0;
     }
 }

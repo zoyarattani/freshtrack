@@ -3,36 +3,50 @@ const highlightButton = document.getElementById("highlight-button");
 const messageButton = document.getElementById("message-button");
 
 const message = document.getElementById("interactive-message");
-const features = document.getElementById("features");
+const featureItems = document.querySelectorAll(".feature-item");
 
 themeButton.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
-        themeButton.textContent = "Light Mode";
+        themeButton.innerHTML = "Light Mode";
+        document.body.style.letterSpacing = "0.2px";
     } else {
-        themeButton.textContent = "Dark Mode";
+        themeButton.innerHTML = "Dark Mode";
+        document.body.style.letterSpacing = "0px";
     }
 });
 
 highlightButton.addEventListener("click", function () {
-    features.classList.toggle("highlight");
+    featureItems.forEach(function (item) {
+        item.classList.toggle("highlight-feature");
+    });
 
-    if (features.classList.contains("highlight")) {
-        highlightButton.textContent = "Remove Highlight";
+    if (highlightButton.innerHTML === "Highlight Features") {
+        highlightButton.innerHTML = "Remove Highlight";
     } else {
-        highlightButton.textContent = "Highlight Features";
+        highlightButton.innerHTML = "Highlight Features";
     }
 });
 
 messageButton.addEventListener("click", function () {
     if (message.classList.contains("special-message")) {
-        message.textContent = "Use the buttons below to change a few things on the page.";
+        message.innerHTML =
+            "Use the buttons below to change a few things on the page.";
+
         message.classList.remove("special-message");
-        messageButton.textContent = "Change Message";
+        message.style.fontSize = "1rem";
+        message.style.fontStyle = "normal";
+
+        messageButton.innerHTML = "Change Message";
     } else {
-        message.textContent = "Don't forget to check which groceries need to be used soon!";
+        message.innerHTML =
+            "Remember to check which groceries need to be used soon!";
+
         message.classList.add("special-message");
-        messageButton.textContent = "Reset Message";
+        message.style.fontSize = "1.2rem";
+        message.style.fontStyle = "italic";
+
+        messageButton.innerHTML = "Reset Message";
     }
 });

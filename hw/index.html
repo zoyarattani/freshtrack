@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FreshTrack is an idea for an app that helps people keep track of groceries and expiration dates.">
+
+    <meta name="description" content="FreshTrack is an app idea that helps people keep track of groceries and expiration dates.">
     <meta name="author" content="Zoya Rattani">
+    <meta name="keywords" content="FreshTrack, groceries, food waste, expiration dates, food tracker">
 
     <title>FreshTrack</title>
 
@@ -46,35 +48,58 @@
             </p>
 
             <p>
-                The main goal is to make it easier to use groceries before they go bad.
+                The main goal is to help people <strong>use groceries before they expire</strong>
+                and <em>reduce food waste</em>.
             </p>
         </section>
 
         <section id="features">
             <h2>Features</h2>
 
-            <h3>Add Groceries</h3>
             <p>
-                Users could add groceries manually or scan a barcode after shopping.
+                I focused on a few features that would be useful for keeping track of food at home.
+                One of the main features would be <mark>expiration reminders</mark>.
             </p>
 
-            <h3>Expiration Reminders</h3>
-            <p>
-                FreshTrack could remind users when food is getting close to its expiration date.
-            </p>
+            <div class="features-grid">
 
-            <h3>Organize Food</h3>
-            <p>
-                Groceries could be separated into different categories so they are easier to find.
-            </p>
+                <div class="feature-item">
+                    <h3>Add Groceries</h3>
+                    <p>
+                        Users could add groceries manually or scan a barcode after shopping.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Expiration Reminders</h3>
+                    <p>
+                        FreshTrack could remind users when food is getting close to its expiration date.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Organize Food</h3>
+                    <p>
+                        Groceries could be separated into categories so they are easier to find.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Check What You Have</h3>
+                    <p>
+                        Users could look through their list before buying more groceries.
+                    </p>
+                </div>
+
+            </div>
         </section>
 
         <section id="how-it-works">
             <h2>How It Works</h2>
 
             <p>
-                A user could start by adding the groceries they bought and entering their
-                expiration dates.
+                A user could start by adding the groceries they bought and entering
+                the expiration dates.
             </p>
 
             <ol>
@@ -83,7 +108,7 @@
                 <li>Enter the expiration date.</li>
                 <li>Save the item to the list.</li>
                 <li>Check which foods need to be used soon.</li>
-                <li>Remove the item after it has been used.</li>
+                <li>Remove an item after using it.</li>
             </ol>
         </section>
 
@@ -92,17 +117,17 @@
 
             <h3>Waste Less Food</h3>
             <p>
-                Seeing expiration dates in one place could make it easier to remember which
-                foods need to be used first.
+                Seeing expiration dates in one place could make it easier to remember
+                which foods should be used first.
             </p>
 
             <h3>Spend Less on Groceries</h3>
             <p>
-                Using more of the groceries you already bought could also mean throwing away
-                less food and wasting less money.
+                Using more of the groceries that were already purchased could mean
+                throwing away less food and wasting less money.
             </p>
 
-            <h3>Keep Things Organized</h3>
+            <h3>Stay Organized</h3>
             <p>
                 Instead of trying to remember everything in the refrigerator and pantry,
                 users could check their FreshTrack list.
@@ -127,7 +152,7 @@
                    rel="noopener noreferrer">
                     EPA website
                 </a>
-                also has tips for reducing wasted food.
+                also has information about reducing wasted food.
             </p>
         </section>
 
@@ -138,32 +163,38 @@
                 These images show some of the ideas behind FreshTrack.
             </p>
 
-            <figure>
-                <img src="images/groceries.jpg"
-                     alt="Fresh groceries on a kitchen counter">
+            <!-- Images used for the FreshTrack gallery -->
 
-                <figcaption>
-                    Groceries that could be added after shopping.
-                </figcaption>
-            </figure>
+            <div class="gallery-grid">
 
-            <figure>
-                <img src="images/phone-app.jpg"
-                     alt="A person using a grocery app on a phone">
+                <figure>
+                    <img src="images/groceries.jpg"
+                         alt="Fresh groceries on a kitchen counter">
 
-                <figcaption>
-                    FreshTrack would be used from a phone.
-                </figcaption>
-            </figure>
+                    <figcaption>
+                        Groceries that could be added after shopping.
+                    </figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/refrigerator.jpg"
-                     alt="An organized refrigerator filled with groceries">
+                <figure>
+                    <img src="images/phone-app.jpg"
+                         alt="A person using a grocery app on a phone">
 
-                <figcaption>
-                    Keeping food organized makes it easier to see what is available.
-                </figcaption>
-            </figure>
+                    <figcaption>
+                        FreshTrack would be used from a phone.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/refrigerator.jpg"
+                         alt="An organized refrigerator filled with groceries">
+
+                    <figcaption>
+                        An organized refrigerator makes food easier to find.
+                    </figcaption>
+                </figure>
+
+            </div>
         </section>
 
         <section id="interactive">
@@ -173,9 +204,11 @@
                 Use the buttons below to change a few things on the page.
             </p>
 
-            <button id="theme-button">Dark Mode</button>
-            <button id="highlight-button">Highlight Features</button>
-            <button id="message-button">Change Message</button>
+            <div class="button-area">
+                <button id="theme-button">Dark Mode</button>
+                <button id="highlight-button">Highlight Features</button>
+                <button id="message-button">Change Message</button>
+            </div>
         </section>
 
     </main>
